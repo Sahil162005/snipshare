@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum State{
+  PUBLIC
+  PRIVATE
+  PASSWORD_PROTECTED
+}
+
+model Snippet {
+    id String    @id @default(uuid())
+    userId  String
+    user    User    @relation(fields: [userId], references: [id])
+    title     String
+    code      String
+    language  String
+    password  String?
+    slug      String    @unique
+    status    State @default(PUBLIC)
+    expiresAt DateTime?
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+  }
+
+  model User{
+    id    String    @id @default(uuid())
+    email     String    @unique
+    apiPrefix String
+    hashedKey       String
+    createdAt DateTime    @default(now())
+    keyCreatedAt DateTime @default(now())
+    updatedAt DateTime  @updatedAt
+    snippets  Snippet[] 
+  }
