@@ -35,6 +35,17 @@ If you are learning and want to build this project yourself, use this workflow:
 - Review decisions for security, validation, status codes, and edge cases first.
 - Move to the next feature only after the current one is solid.
 
+### What should I do now?
+
+1. Pick one small feature (for example: `POST /users/register`).
+2. Describe your planned request/response shape before coding.
+3. Implement it yourself in small steps.
+4. Ask for guidance when you get stuck, sharing:
+   - your current code
+   - expected behavior
+   - actual behavior/error
+5. Add or update tests for that feature, then rerun tests.
+
 ## Project setup
 
 ```bash
