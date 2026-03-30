@@ -25,6 +25,16 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Mentor Mode (Guide-Only)
+
+If you are learning and want to build this project yourself, use this workflow:
+
+- You write the code; your mentor gives guidance only.
+- Ask design questions before implementing each feature.
+- Do not request direct implementations unless explicitly needed.
+- Review decisions for security, validation, status codes, and edge cases first.
+- Move to the next feature only after the current one is solid.
+
 ## Project setup
 
 ```bash
